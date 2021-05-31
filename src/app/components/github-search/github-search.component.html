@@ -1,0 +1,16 @@
+<form class="card card-sm text-center">
+    <h4 class="p-2 mb-0 advice-title text-left">Github Search</h4>
+    <div class="card-body row no-gutters align-items-center">
+        <div class="col-auto d-flex p-1">
+            <i class="fas fa-search h5 text-body m-0"></i>
+        </div>
+        <div class="col">
+            <input (keydown.enter)="searchRepositories()" [(ngModel)]="requestData.keyword" class="form-control form-control-sm form-control-borderless" type="search"
+                placeholder="Search topics or keywords" [ngModelOptions]="{standalone: true}">
+        </div>
+    </div>
+</form>
+
+<div class="git-hub-searchess">
+    <app-github-search-list [searchedList]="searchedRepositories" [noDataMessage]="noDataMessage"></app-github-search-list>
+</div>

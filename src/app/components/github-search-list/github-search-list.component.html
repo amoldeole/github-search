@@ -1,0 +1,20 @@
+<section id="info">
+    <ul class="list-group" *ngFor="let repo of searchedList?.items;">
+        <li class="list-group-item">
+            <div class="col-xs-12">
+                <span class="float-left">
+                    {{repo.full_name}}
+                </span>
+                <span class="visible-xs">
+                    {{repo.language}}
+                </span> 
+                <span class="text-muted c-info float-right" data-toggle="tooltip">
+                    {{repo.score}}
+                </span>
+            </div>
+            <div class="visible-xs font-sm text-left">
+                <span class="text-muted">{{repo.updated_at}}</span>
+            </div>
+        </li>
+    </ul>
+</section>
